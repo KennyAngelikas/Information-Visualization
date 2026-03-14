@@ -7,32 +7,27 @@
         <title>Template</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <script>
-            // Self-executing function
-            (function() {
-                'use strict';
-                window.addEventListener('load', function() {
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    var forms = document.getElementsByClassName('needs-validation');
-
-                    // Loop over them and prevent submission
-                    var validation = Array.prototype.filter.call(forms, function(form) {
-                        form.addEventListener('submit', function(event) {
-                            if (form.checkValidity() === false) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-                            form.classList.add('was-validated');
-                        }, false);
-                    });
-                }, false);
-            })();
-        </script>
+        <script type="module" src="./main.js"></script>
+    
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         
+        
+        <h1>Activity Four</h1>
+        <!-- A button that creates an “alert” when clicked (hint: “onClick”)-->
+        <button type="button" class="btn btn-danger" onclick="alert('Button Clicked!')">Click Me!</button>
+
+        <!--A new button that changes color when clicked back and forth-->
+        <button type="button" class="btn btn-primary" onclick="changeColor(this)">Change Color</button>
+
+        <!--An event listener that causes anything the user types to appear on the screen in large text-->
+        <input type="text" id="userInput" placeholder="Type something here..." oninput="document.getElementById('output').innerHTML = this.value.toUpperCase();">
+        <p id="output"></p>
+
+        
         <h1 style="padding: 20px;">Bootstrap Form Example</h1>
+        
         <form class="needs-validation" novalidate>
             <div class="mb-3">
                 <label class="form-label" for="inputEmail">Email</label>
@@ -88,7 +83,7 @@
 
         <h3>My Paragraph</h3>
         <p>
-            Here is some paragraph <a href="http://localhost:8080/lab2/template.html">text</a>
+            Here is some paragraph <a href="http://localhost:8080/lab2/index.html">text</a>
         </p>
         
         <h4>My Table</h4>
@@ -110,5 +105,7 @@
                 <td>27</td>
             </tr>
         </table> 
+
+        <img src="picture.png" alt="A descriptive text for the image">
     </body>
 </html>
